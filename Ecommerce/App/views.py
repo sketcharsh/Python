@@ -79,12 +79,9 @@ def AddProd(request):
 def Mycart(request):
 	try:
 		em = request.session['ssn']
-		# print(em)
+		print(em)
 		obj= Carts.objects.all()
 		obj= Carts.objects.filter(ses_em=em)
-		for singleProd in obj:
-			if(len(singleProd.crt_id)>1):
-				singleProd.crt_qty=singleProd.crt_qty+1
 		data = {'id':obj}
 		return render(request,'App/mycart.html',data)
 	except:
