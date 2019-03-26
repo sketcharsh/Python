@@ -1,4 +1,4 @@
-"""GitDemo URL Configuration
+"""Ecom URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -15,7 +15,20 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
+from App import views
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url('admin/', admin.site.urls),
+    url('index/', views.index),
+    url('signup/', views.signup),
+    url('insert/', views.insert),
+    url('loginPage/', views.loginPage),
+    url('login/', views.login),
+    url('cat/', views.cat),
+    url('prod/', views.prod),
+    url('ProdDetails/', views.ProdDetails),
+    url('AddProd/', views.AddProd),
+    url('Mycart/', views.Mycart),
+    url('Delete/', views.Delete),
+    url('logout/', views.logout),
+
 ]

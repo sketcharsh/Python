@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Cart</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/my.css'%}">
+</head>
+<body>
+	<center>
+		<h1>My Cart</h1>
+	
+	<table border="1" align="center">
+				<td>Product Name</td>
+				<td>Desciption</td>
+				<td>QTY</td>
+				<td>Action</td>
+			</tr>
+		{% for prod in id %}
+		<tr>
+		<form action="/Delete/" method="POST">
+			{% csrf_token %}
+			<input type="hidden" name="ssn" value={{request.session.ssn}}>
+			<input type="hidden" name="pid" value={{prod.crt_id}}>
+			<td><input readonly="readonly" name="nm" value={{prod.crt_name}}></td>
+			<td><input readonly="readonly" name="desc" value={{prod.crt_desc}}></td>
+			<td><input readonly="readonly" name="qty" value={{prod.crt_qty}}></td>
+			<td><input type="submit" value="Delete"></td>
+		</form>
+		</tr>
+		{%endfor%}	
+	</table>
+	<!-- {{id}} --><br>
+	<form action="/cat/">
+    <input type="submit" value="Categories" />
+	</form>
+	<form action="/logout/">
+    <input type="submit" value="Logout" />
+	</form>
+	</center>
+</body>
+</html>

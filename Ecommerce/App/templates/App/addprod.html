@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Categories</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/my.css'%}">
+</head>
+<body>
+	<center>
+	<form action="/AddProd/" method="POST">
+		{% csrf_token %}
+			{{id}}
+			<input type="hidden" name="ssn" value={{request.session.ssn}}>
+			<input type="submit" value="Add">
+	</form>
+	<form action="/logout/">
+    <input type="submit" value="Logout" />
+	</form>
+	</center>
+</body>
+</html>

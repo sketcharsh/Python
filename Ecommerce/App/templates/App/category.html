@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Categories</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/my.css'%}">
+</head>
+<body>
+	<center>
+		<h1>Hello {{ request.session.ssn }}</h1>
+	<h1>Categories</h1>
+	<table border="1" align="center">
+		<td>Categories</td>
+		<td>Action</td>
+		{% for cat in id %}
+		<tr>
+			<form action="/prod/" method="POST">
+			{% csrf_token %}
+			<input type="hidden" name="ssn" value={{request.session.ssn}}>
+			<input type="hidden" name="selectedCat" value={{cat.c_obj}}>
+			<td><input readonly="readonly" name="cl" value={{cat.c_name}}></td>
+			<td><input type="submit" value="view"></td>
+		</form>
+		</tr>
+		{%endfor%}	
+	</table>
+	<br>
+<!-- 	<form action="/signup/">
+    <input type="submit" value="Register Yourself" />
+	</form> -->
+	<form action="/logout/">
+    <input type="submit" value="Logout" />
+	</form>
+	</center>
+	<!-- {{id}} -->
+</body>
+</html>

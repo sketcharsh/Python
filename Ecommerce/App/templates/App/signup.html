@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/my.css'%}">
+	<title>Signup</title>
+</head>
+<body>
+	<center>
+	<h1>Signup</h1>
+		<table align="center">
+			<form action="/insert/" method="POST">
+				{% csrf_token %}
+			<tr>{{id}}</tr>
+		</table><br>
+			<td><input type="submit" value="submit"></td>
+			</form>
+			<br>
+	<form action="/loginPage/">
+    <input type="submit" value="Already user?"/>
+	</form>
+</center>
+</body>
+</html>
