@@ -1,0 +1,44 @@
+input[type=text] {
+  width: 100%;
+  height: 5%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-family:'Helvetica';
+}
+input{
+  padding:5px;
+  font-size:16px;
+  font-family:'Helvetica';    
+}
+h1{
+	font-family:'Helvetica';
+}
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: Black;
+  border: none;
+  color: white;
+  padding: 10px 28px;
+  text-decoration: none;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+input[readonly=readonly] {
+  width: 100%;
+  height: 5%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-family:'Helvetica';
+}
+tr, td {
+  	border-bottom: 1px solid #ddd;
+  	font-family:'Helvetica';
+  	padding: 10px 10px;
+}
+div.signup {
+  background-color: black;
+  color: white;
+  margin: 20px;
+  padding: 20px;
+} 

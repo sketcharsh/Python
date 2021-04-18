@@ -1,0 +1,22 @@
+
+{% load static %}
+
+<html>
+	<body>
+
+		<h1> Login page </h1>
+
+		<img src="{% static 'images/image1.png' %}" height=200 width=700/>
+
+<h3>
+		<form action="/loginCheck/" method="POST">
+			{% csrf_token %}
+<center>
+			Enter username : <input type="text" name="username"><br>
+			Enter password : <input type="text" name="password"><br>
+
+			<input type="submit" value="Login"></center>
+		</form>
+</h3>
+	</body>
+</html>

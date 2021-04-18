@@ -1,0 +1,19 @@
+{% load static %}
+<html>
+<head>
+	<link rel="stylesheet" href="{% static 'css/my.css' %}">
+</head>
+<body>
+	<h1>Hello {{data}}</h1>
+	<img width='1300' height='250'src="{% static 'img/example.jpg' %}">
+
+	
+	<form action='home/' method='post'>
+	{% csrf_token %}
+	Enter Email: <input type='text' name='email'>
+	Password : <input type='password' name='pw'>
+	<input type='submit' name='Submit'>
+	</form>
+	
+</body>
+</html>

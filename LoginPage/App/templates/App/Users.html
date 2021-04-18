@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+<head>
+	<link rel="stylesheet" href="{% static 'css/my.css' %}">
+</head>
+<body>
+	
+	<h1>Hello {{data}}</h1>
+	<table border=1>
+	{% for singleUser in users %}
+	<tr>
+		<form action="loginDetails/" method="POST">
+		{% csrf_token %}
+			<td>{{singleUser.usrFn}}</td>
+			<td><input type="text" name="selectedUser" value={{singleUser.usrFn}}></td>
+			<td><input type="submit" value="view"></td>
+			<td><input type="submit" formaction="/logout/" name="selectedUser" value={{singleUser.usrEm}}>logout</td>	
+		</form>
+	</tr>
+	{%endfor%}
+	 </table>
+	<a href="/JsonData">JSONDATA</a>
+</body>
+</html>

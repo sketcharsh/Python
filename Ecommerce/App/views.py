@@ -87,7 +87,8 @@ def Mycart(request):
 	except:
 		return render(request,'App/login.html')
 def Delete(request):
-	pid=request.POST.get('pid')
+	em = request.session['ssn']
+	pid = request.POST.get('pid')
 	obj= Carts.objects.filter(crt_id=pid)
 	obj.delete()
 	em = request.session['ssn']

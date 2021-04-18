@@ -1,0 +1,6 @@
+ 
+ from App.models import Product,Category                                 
+
+ lst = Category.objects.all() 
+
+ Product.objects.create(p_id="5",p_name="Jeans",p_desc="Denim",c_obj=lst[3]) 

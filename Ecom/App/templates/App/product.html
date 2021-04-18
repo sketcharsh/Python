@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/my.css'%}">
+</head>
+<body>
+	<center><h1>Products</h1>
+	<table border="1" align="center">
+		<tr>
+				<td>Product Name</td>
+				<td>Desciption</td>
+				<td>Action</td>
+			</tr>
+		{% for prod in products %}
+		<tr>
+			
+		<form action="/AddProd/" method="POST">
+			{% csrf_token %}
+			<input type="hidden" name="ssn" value={{request.session.ssn}}>
+			<input type="hidden" name="pid" value={{prod.p_id}}>
+			<td><input readonly="readonly" name="nm" value={{prod.p_name}}></td>
+			<td><input readonly="readonly" name="desc" value={{prod.p_desc}}></td>
+			<td><input type="submit" value="Add to cart"></td>
+		</form>
+		</tr>
+		{%endfor%}	
+	</table><br>
+	<!-- {{id}} -->
+	<form action="/cat/">
+    <input type="submit" value="Categories" />
+	</form>
+	<form action="/Mycart/">
+	<input type="hidden" name="ssn" value={{request.session.ssn}}>
+    <input type="submit" value="My Cart" />
+	</form>
+	</center>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SignUp Page</title>
+</head>
+<body>
+	<center>
+		<form action="/insert/" method="POST">
+			{% csrf_token %}
+			{{id}}
+			<br>
+			<input type="submit" value="Insert">
+		</form>
+	</center>
+</body>
+</html>

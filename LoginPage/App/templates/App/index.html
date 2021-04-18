@@ -1,0 +1,13 @@
+{% load static %}
+<html>
+<body>
+
+<form action='home/' method='POST'>
+	{% csrf_token %}
+	Enter Email: <input type='text' name='email'>
+	Password : <input type='password' name='pw'>
+	<input type='submit' name='Submit'>
+	</form>
+	
+	</body>
+</html>

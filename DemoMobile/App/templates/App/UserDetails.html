@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Details</title>
+</head>
+<body>
+	<center>
+		<table border="1">
+			<td>Name</td>
+			<td>Mail</td>
+			<td>Password</td>
+			{% for singleUser in users %}
+
+			<tr>
+				<form>
+					<td>{{singleUser.Name}}</td>
+					<td>{{singleUser.Mail}}</td>
+					<td>{{singleUser.Password}}</td>
+				</form>
+			</tr>
+			{%endfor%}
+		</table>
+	</center>
+</body>
+</html>

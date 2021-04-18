@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/my.css'%}">
+	<title>Login</title>
+</head>
+<body>
+
+	<center>
+		<h1>Login</h1>
+		<table>
+			<form action="/login/" method="POST">
+				{%csrf_token%}
+			<td>Email</td>
+			<td> <input type="text" name="email"></td>
+			<td>Password</td>
+			<td> <input type="text" name="password"></td>
+			<td><input type="submit" value="submit"></td>
+		</form>
+		</table>
+		<br>
+			<form action="/signup/">
+   			 <input type="submit" value="Register Yourself" />
+			</form>
+	</center>
+</body>
+</html>

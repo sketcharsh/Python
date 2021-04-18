@@ -1,0 +1,21 @@
+
+{% load static %}
+
+<html>
+	<body>
+
+		<h1> Register page </h1>
+
+ 
+<h3>
+		<form action="/addNewUser/" method="POST">
+			{% csrf_token %}
+<center>
+			Enter username : <input type="text" name="username"><br>
+			Enter password : <input type="text" name="password"><br>
+
+			<input type="submit" value="Register"></center>
+		</form>
+</h3>
+	</body>
+</html>

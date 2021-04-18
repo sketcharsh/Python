@@ -27,4 +27,4 @@ class Carts(models.Model):
 	crt_qty = models.IntegerField(default=1)
 	def __str__(self):
 		return self.crt_name
-
+	

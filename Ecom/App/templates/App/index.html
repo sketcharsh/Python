@@ -1,0 +1,26 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HOME PAGE</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/my.css'%}">
+</head>
+<body>
+	<center>
+		<h1>Welcome</h1>
+			<table width="100%">
+			<td align="center">
+			<form action="/signup/">
+   				 <input type="submit" value="Register Yourself" />
+   				</form><br>
+				<form action="/loginPage/">
+					<input type="submit" value="Login"/>
+				</form><br>
+				<form action="/cat/">
+    			<input type="submit" value="Categories" />
+				</form>
+			</td>
+		</table>
+		</center>
+	</body>
+</html>

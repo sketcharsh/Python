@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<table border="1">
+		{% for singleUser in id%}
+		<tr>
+		<form action="/ViewDet/" method="POST"> 
+			{% csrf_token %}
+			<input type="hidden" name="selected" value={{singleUser.Name}}>
+		<td>
+			<input type="text" name="nm" value={{singleUser.Name}}>
+		</td>
+		<td>
+			<input type="text" name="em" value={{singleUser.Mail}}>
+		</td>
+		<td>
+			<input type="text" name="ps" value={{singleUser.Password}}>
+		</td>
+		<td>
+			<input type="submit" value="submit">
+		</td>
+		</form>
+</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>

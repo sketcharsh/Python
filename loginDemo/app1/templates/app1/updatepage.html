@@ -1,0 +1,21 @@
+<html>
+<head>
+<body>
+
+	<form action="/updatedata/" method="POST">
+		{% csrf_token %}
+
+		<center>Welcome to Update Page</center>
+
+		userId <input type="text" name="userId" value={{userId}} /> <br><br>
+		userName <input type="text" name="userName" value={{userName}} /> <br><br>
+		userPwd <input type="text" name="userPwd" value={{userPwd}} /> <br><br>
+
+		<input type="submit" name="Update" value="Update"> <br><br>
+
+	</form>
+
+
+</body>
+</head>
+</html>

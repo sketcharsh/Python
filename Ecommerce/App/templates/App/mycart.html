@@ -23,7 +23,7 @@
 			<input type="hidden" name="pid" value={{prod.crt_id}}></td>
 			<td><input readonly="readonly" name="nm" value={{prod.crt_name}}></td>
 			<td><input readonly="readonly" name="desc" value={{prod.crt_desc}}></td>
-			<td><input readonly="readonly" name="qty" value={{prod.crt_qty}}></td>
+			<td><input type="number" min="1" name="qty" value={{prod.crt_qty}}></td>
 			<td><input type="submit" value="Delete"></td>
 		</form>
 		</tr>

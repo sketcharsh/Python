@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" load static href="{% static 'css/my.css'%}">
+	<title>
+	</title>
+</head>
+<body>
+	<h1>Hello</h1>
+	<form action="" method="POST">
+		{% csrf_token %}
+		{{id}}
+		<input type="submit" name="submit">
+	</form>
+</body>
+</html>

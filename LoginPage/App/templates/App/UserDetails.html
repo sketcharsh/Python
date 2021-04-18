@@ -1,0 +1,26 @@
+<html>
+<head>
+</head>
+<body>
+	
+	<table border=1>
+	{% for singleUser in users %}
+	<tr>
+		<form action='/loginDetails/' method='POST'>
+			{% csrf_token %}
+		<td>{{singleUser.usrFn}}</td>
+		<td><input type="text" value={{singleUser.usrFn}} name="fn"></td>
+		<td><input type="text" value={{singleUser.usrLn}} name="ln"></td>
+		<td><input type="text" value={{singleUser.usrPs}} name="ps"></td>
+		<td><input type="text" value={{singleUser.usrPh}} name="ph"></td>
+		<td><input type="text" value={{singleUser.usrEm}} name="em"></td>
+		<td><input type="submit" formaction="delete/" name="selectedUser" value={{singleUser.usrFn}}>Delete</td>
+		<td><input type="submit" formaction="update/" name="selectedUser" value={{singleUser.usrFn}}>Update</td>
+		<td><input type="submit" formaction="/logout/" name="selectedUser" value={{singleUser.usrEm}}>logout</td>
+		</form>
+	</tr>
+	{%endfor%}
+	 </table>
+	
+</body>
+</html>

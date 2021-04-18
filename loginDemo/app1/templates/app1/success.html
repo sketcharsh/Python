@@ -1,0 +1,32 @@
+<html>
+	<body>
+<form action="/logout/" method="POST">
+		{% csrf_token %}
+		{{request.session.Patwa}}
+
+		<h1> Login Success </h1>
+
+		<table border=1>
+ 
+		{% for singleUser in users%}
+		<tr>
+
+
+		<td>{{singleUser.userId}}</td>
+
+		<td>{{singleUser.userName}}</td>
+
+		<td>{{singleUser.userPwd}}</td>
+
+		<td><a href="/updateuser/?name={{singleUser.userName}}">Update</a></td>
+		<td><a href="/deleteuser/?name={{singleUser.userName}}">Delete</a></td>
+
+		</tr>
+		{%endfor%}
+
+		<td><input type="submit" name="logout" value="logout"></td>
+ 
+</table>
+</form>
+	</body>
+</html>
